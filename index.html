@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday, Moriom! ❤️</title>
+<style>
+*{box-sizing:border-box} body{margin:0;min-height:100vh;color:#fff3fb;font-family:Georgia,serif;background:radial-gradient(ellipse at 50% 0%,#853264,#45143f 48%,#1d0b2e);}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.42;background-image:radial-gradient(#ffe4f4 1px,transparent 1.5px),radial-gradient(#f5b5dd 1px,transparent 1.5px);background-size:43px 43px,79px 79px;background-position:0 0,20px 30px}
+main{position:relative;width:min(700px,100%);margin:auto;padding:25px 17px 60px}
+h1{text-align:center;margin:8px 0 6px;font-size:clamp(27px,7vw,43px);color:#ffe0f2;text-shadow:0 3px 18px #ff69b7}
+.sub{text-align:center;color:#ffd0e8;margin:0 0 23px;font-size:14px}
+.chat{display:flex;flex-direction:column;gap:14px}
+.bubble{align-self:flex-start;max-width:90%;padding:10px 15px;background:#f9d8eb;color:#67254f;border-radius:18px 18px 18px 5px;box-shadow:0 5px 18px #10051c66;font-size:14px}
+.giftrow{width:min(340px,88%);align-self:flex-start;padding-left:7px}
+.gift{position:relative;width:100%;height:91px;border:0;border-radius:15px;cursor:pointer;background:linear-gradient(140deg,#ffacd2,#e95c9d);box-shadow:0 8px 20px #12051c99,inset 0 2px 3px #fff9;transition:transform .2s}
+.gift:hover{transform:translateY(-3px) rotate(-.6deg)}
+.gift:before{content:"";position:absolute;left:43%;top:0;width:14%;height:100%;background:#fff0f8}
+.gift:after{content:"";position:absolute;left:0;top:42%;width:100%;height:16%;background:#fff0f8}
+.bow{position:absolute;z-index:2;left:50%;top:2px;transform:translateX(-50%);width:53px;height:27px}
+.bow:before,.bow:after{content:"";position:absolute;top:0;width:25px;height:19px;border:5px solid #fff0f8;border-radius:80% 80% 15% 80%}
+.bow:before{left:0;transform:rotate(25deg)}.bow:after{right:0;transform:scaleX(-1) rotate(25deg)}
+.giftlabel{position:absolute;z-index:3;inset:0;display:grid;place-items:center;color:#8a285d;font-weight:bold;font-size:17px;text-shadow:0 1px #fff;}
+.msg{display:none;align-self:flex-start;max-width:95%;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7;padding:15px 18px;background:#fff5fa;color:#58203f;border-radius:5px 19px 19px 19px;box-shadow:0 7px 22px #10051c88;animation:pop .35s ease}
+.msg.show{display:block} .giftrow.gone{display:none}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.bottom{text-align:center;color:#ffd1e9;margin:27px 0 0;font-size:13px}
+</style></head>
+<body><main>
+<h1>Happy Birthday, Moriom! 🎂</h1>
+<p class="sub">A little surprise made just for you ❤️</p>
+<div class="chat" id="chat">
+<div class="bubble">Tomar jonno onekgulo chotto surprise ache… 💌</div>
+</div>
+<p class="bottom">Made with ♥ for Moriom</p>
+</main>
+<script>
+const gifts = ["Today is a very special day for you...🙂🥀","Heppy birthday ❤️‍🩹🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💞🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 ❤️🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 ❤️🎂","Happy Birthday🥀🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💞🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 ❤️🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 ❤️🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 ❤️🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🥀🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💗🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 🎀🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💝🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 💕🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🌹🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💞🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🌸🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 💘🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 ❤️‍🩹🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🌷🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 💐🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🥀🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 💖🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🎂❤️","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🎉🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 💗🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💝🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🫶🎂","Happy Birthday ❤️‍🩹🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 ❤️‍🩹🎂","Happy Birth","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 ❤️","£𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🦋🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💞🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🌸🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💘🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 💐🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 🥀🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💖🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🎂❤️","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🎉🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 🩷🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🌷🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 💝🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 💕🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🫶🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🌹","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 💓","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🎀","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🌺🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💞🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🦋🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 💘🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🥀🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 💖🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🌸🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎❤️‍🩹🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝔂 🎉🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 ❤️🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹❤️‍🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🎀🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🥀🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🎂","ℋ𝒶𝓅𝓅𝓎 ℬ𝒾𝓇𝓉𝒽𝒹𝒶🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🎀🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🥀🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🥀🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🦋🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 🎀🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🥀🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🦋🎂","𝑯𝒂𝒑𝒑𝒚 𝑩𝒊𝒓𝒕𝒉𝒅𝒂𝒚 🦋🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 💗🎂","𝓗𝓪𝓹𝓹𝔂 𝓑𝓲𝓻𝓽𝓱𝓭𝓪𝓎 💗🎂","𝒣𝒶𝓅𝓅𝓎 𝐵𝒾𝓇𝓉𝒽𝒹𝒶𝓎 🥀🎂","Happy Birthday to You....🎂❤️","Tumar agami din gulo jeno khub valo hoy... Tomar jiboner protiti din shundor hok, protiti shopno puron hok. Shobshomoy hashikhushi theko, valo theko. Allah tomar jibon shukh, shanti ar valobasha diye voriye dik... ❤️\n\nBest of Luck 🍀❤️\n\nOnek onek shubho jonmodin!! 🎂🌹"];
+const chat = document.getElementById('chat');
+gifts.forEach((message,index)=>{
+ const row=document.createElement('div'); row.className='giftrow';
+ const btn=document.createElement('button'); btn.className='gift'; btn.type='button';
+ btn.setAttribute('aria-label','Open gift '+(index+1));
+ btn.innerHTML='<span class="bow"></span><span class="giftlabel">Surprise 🎁</span>';
+ const msg=document.createElement('div'); msg.className='msg'; msg.textContent=message;
+ btn.addEventListener('click',()=>{row.classList.add('gone');msg.classList.add('show');});
+ row.appendChild(btn);chat.appendChild(row);chat.appendChild(msg);
+});
+</script></body></html>
